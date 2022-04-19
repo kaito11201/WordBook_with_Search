@@ -223,7 +223,7 @@ class Viewer:
         
     def _sort(self, col_name):
         # 単語帳にある英単語を並び替える関数
-        # 引数: col_name <class 'dict'>
+        # 引数: col_name <class 'str'>
         
         # 列名からキーを取得
         key = [k for k, v in COLUMN_NAME.items() if v == col_name][0]
