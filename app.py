@@ -119,7 +119,7 @@ class App:
         self.search.set_csv(PATH + WORDS_NAME)
         
         # 検索する英単語が過去に検索したか確認
-        if self.search.check():
+        if self.search.is_searched():
             # 意味と検索回数を取得し、検索回数を1追加する
             mean, count = self.search.get_mean_count()
             self.search.add_count()
