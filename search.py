@@ -10,7 +10,6 @@ SEARCH_ENGINE = 'https://ejje.weblio.jp/content/'
 # 表示する意味の個数 <class 'int'>
 MEAN_N = 3
 
-
 class Search:
     # 英単語を検索・単語帳に英単語を追加するクラス
     
@@ -27,14 +26,12 @@ class Search:
     def set_word(self, word):
         # 検索する英単語を格納する関数
         # 引数: word <class 'str'>
-        
         self.word = word
         
     def set_csv(self, name):
         # 単語帳を格納する関数
         # デフォルトで'list_en.csv'を取得する
         # 引数: name <class 'str'>
-        # 戻り値: <class 'bool'>
         
         self.name = name
         
@@ -42,13 +39,12 @@ class Search:
         self.df = pd.read_csv(self.name)
         self.df = self.df.set_index('word')
     
-    def check(self):
+    def is_searched(self):
         # 検索した英単語が過去に検索したか確認する関数
         # 戻り値: <class 'bool'>
         
         if self.word in self.df.index.values:
             return True
-        
         return False
     
     def get_mean_count(self):
@@ -93,5 +89,4 @@ class Search:
     
     def update(self):
         # 単語帳を更新する関数
-        
         self.df.to_csv(self.name)
