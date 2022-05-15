@@ -6,7 +6,7 @@
 - search.py: 検索機能
 - main.py: 実行用スクリプト
 ## 説明
-https://qiita.com/kaito2140/items/9aa809a8b5e7c6088381
+[【Python】検索機能付きの英単語帳を作ってみた【Tkinter】](https://qiita.com/kaito2140/items/9aa809a8b5e7c6088381)
 ## 実行方法
 1. リポジトリをクローン
 2. main.pyを実行
